@@ -1,6 +1,6 @@
-import itemImg from '';
-import ItemCount from "./ItemCount";
-import './Item.css';
+import itemImg from '../imagenes/living.jpg';
+import ItemCount from "../ItemCount/ItemCount";
+
 
 export default function Item({categoria, name, price, img,}) {
 

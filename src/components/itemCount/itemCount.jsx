@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState}  from 'react';
 import './ItemCount.css';
 
 export default function ItemCount({stock, initial, onAdd}) {
@@ -22,11 +21,12 @@ export default function ItemCount({stock, initial, onAdd}) {
     }
 
     return (
-        <div className="itemCount">
+        <div className="ItemCount">
             <button id='less' className="itemCount__minusBtn" onClick={decrease}>-</button>
             <span className="itemCount__quantity">{quantity}</span>
-            <button id='plus' className="itemCount__plusBtn" onClick={increase}>+</button>
-            <button className="itemCount__addToCartBtn" onClick={addToCart}><i class="bi bi-bag-plus"></i></button>
+            <button id='plus' className="ItemCount__plusBtn" onClick={increase}>+</button>
+            <button className="ItemCount__addToCartBtn" onClick={addToCart}><i class="bi bi-bag-plus"></i></button>
         </div>
     );
 }
+
