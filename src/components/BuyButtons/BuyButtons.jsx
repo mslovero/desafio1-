@@ -9,7 +9,7 @@ export default function BuyButtons() {
                 <button className="buyButtons__goToCart">Ver pedido</button>
             </Link>
             <Link to='/'>
-                <button className="buyButtons__goToMenu">Volver al menú</button>
+                <button className="buyButtons__goToMenu">Seguir comprando</button>
             </Link>
         </div>
     );
