@@ -1,0 +1,66 @@
+[
+    {
+        "id": "01",
+        "categoria": "Muebles",
+        "name": "Silla de madera ",
+        "price": "10000",
+        "img": "../imagenes/silla.jpg",
+        "detail": "Silla de madera, color natural"
+    },
+    {
+        "id": "02",
+        "categoria": "Muebles",
+        "name": "Mesa de Comedor",
+        "price": "50000",
+        "img": "../imagenes/living.jpg",
+        "detail": "Mesa de comedor con 6 sillas "
+    },
+    {
+        "id": "03",
+        "categoria": "Muebles",
+        "name": "Sillon Nórdico",
+        "price": "20000",
+        "img": "../imagenes/sillon-nórdico.jpg",
+        "detail": "Sillon Nórdico de un cuerpo"
+    },
+    {
+        "id": "04",
+        "categoria": "Muebles",
+        "name": "Sillon de fibras naturales",
+        "price": "18000",
+        "img": "../imagenes/sillon-fibras naturales.jpg",
+        "detail": "Sillon de fibras naturales de un cuerpo"
+    },
+    {
+        "id": "05",
+        "categoria": "Iluminación",
+        "name": "Lampara de Pie",
+        "price": "5000",
+        "img": "../imagenes/lamara-pie.jpg",
+        "detail": "Lampara de Pie"
+    },
+    {
+        "id": "06",
+        "categoria": "Decoración",
+        "name": "Macetero",
+        "price": "4000",
+        "img": "../imagenes/macetero-bamboo.jpg",
+        "detail": "Macetero de Bamboo"
+    },
+    {
+        "id": "07",
+        "categoria": "Decoración",
+        "name": "Espejo de Fibras Naturales",
+        "price": "7000",
+        "img": "../imagenes/espejo-fibras-naturales.jpg",
+        "detail": "Espejo circular de fibra naturales"
+    },
+    {
+        "id": "08",
+        "categoria": "Muebles",
+        "name": "Mesa Ratona",
+        "price": "13000",
+        "img": "../imagenes/mesa-arrime.jpg",
+        "detail": "Mesa Ratona de madera Petiribi"
+    }
+]

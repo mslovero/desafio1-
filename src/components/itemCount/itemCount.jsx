@@ -1,19 +1,20 @@
 import { useState}  from 'react';
 import './ItemCount.css';
 
+
 export default function ItemCount({stock, initial, onAdd}) {
     const [quantity, setQuantity] = useState(initial);
 
     function increase() {
         if (quantity < stock) {
             setQuantity(quantity + 1);
-        } 
+        }
     }
 
     function decrease() {
         if (quantity > 1) {
             setQuantity(quantity - 1);
-        } 
+        }
     }
 
     function addToCart() {
@@ -29,4 +30,3 @@ export default function ItemCount({stock, initial, onAdd}) {
         </div>
     );
 }
-
