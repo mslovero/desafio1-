@@ -2,7 +2,7 @@ import { useState}  from 'react';
 import './ItemCount.css';
 
 
-export default function ItemCount({item, stock, initial, onAdd, handleInputType}) {
+export default function ItemCount({stock, initial, onAdd, }) {
     const [quantity, setQuantity] = useState(initial);
 
     function increase() {
@@ -13,13 +13,13 @@ export default function ItemCount({item, stock, initial, onAdd, handleInputType}
 
     function decrease() {
         if (quantity > 1) {
-            setQuantity(quantity - 1);
+            setQuantity(quantity - 1)
         }
     }
 
     function addToCart() {
-        onAdd(quantity, item.name);
-        handleInputType ();
+        onAdd(quantity)
+        
     }
 
     return (

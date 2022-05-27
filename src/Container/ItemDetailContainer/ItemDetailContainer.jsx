@@ -7,7 +7,7 @@ import Loader from "../../components/Loader/Loader";
 export default function ItemDetailContainer() {
     const [item,setItem] = useState({});
     const [loader,setLoader] = useState(true);
-    const [quantityToAd,setQuantityToAdd] = useState();
+    const [setQuantityToAdd] = useState();
 
     const {id} = useParams();
 
