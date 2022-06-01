@@ -1,8 +1,11 @@
 
 
 import { Container, Nav, Navbar, } from 'react-bootstrap'
+import "./NavBar.css"
 import { NavLink } from 'react-router-dom'
-import CartWidget from '../CardtWidget/CartWidget'
+import CartWidget from '../CardtWidget/CartWidget.jsx'
+import { useCartContext } from '../../context/CartContext'
+
 //array de categorias
 const array = [
   {idCategoria: '1', name: 'Decoración', nameButton: 'Decoración'},
@@ -13,9 +16,11 @@ const array = [
 
 
 const NavBar = () => {
+  const { cantidadTotal } = useCartContext()
     return (
       <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"style={{color:"white"}}>
           <Container>
           <Navbar.Brand href="#home">PeperinaHome</Navbar.Brand>
           <NavLink
@@ -30,6 +35,7 @@ const NavBar = () => {
           </Nav>
 
           </Navbar.Collapse>
+          {cantidadTotal () !== 0&& cantidadTotal() }
           <CartWidget/>
           </Container>
       </Navbar>

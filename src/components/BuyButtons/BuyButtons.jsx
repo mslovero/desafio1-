@@ -12,6 +12,8 @@ export default function BuyButtons() {
             <Link to='/'>
                 <button className="buyButtons__goToMenu">Seguir comprando</button>
             </Link>
+            
+            
         </div>
     );
 
