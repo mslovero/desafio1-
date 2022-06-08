@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
 import Loader from "../../components/Loader/Loader";
+import {getFirestoreApp, doc, getDoc} from "../../Firebase/config";
 
 
 export default function ItemDetailContainer() {
@@ -14,19 +15,17 @@ export default function ItemDetailContainer() {
     function onAdd(quantity, name) {
         setQuantityToAdd(quantity)
         console.log(`${quantity} unidad/es de ${name} agregada/s al pedido`)
-    }
-
+    } 
     useEffect(() => {
-        setTimeout(() => {
-            fetch("/data/data.json")
-            .then(response => response.json())
-            .then(itemsList => itemsList.find(el => el.id === id))
-            .then(data => setItem(data))
-            .catch(err => console.log(err))
-            .finally(() => setLoader(false))
-        }, 5000);
-    },[id]);
+        const db = getFirestoreApp();
+        const dbQuery = doc (db, 'items', '6HL1cpEEwwcKeDLHwUHz')
+        getDoc(dbQuery)
+        .then (resp => setItem ( { id: resp.id, ...resp.data() })  )
+        .catch(err => console.log(err))
+        .finally(() => setLoader(false))
+        },[id]);
 
+    
     return (
         <div className="itemDetailContainer">
             {loader?
